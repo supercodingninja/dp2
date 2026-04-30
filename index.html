@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dalilah Perez | Family First Life Insurance Broker</title>
+    <meta name="description" content="Dalilah Perez - Licensed Insurance Broker with Family First Life. Term life, whole life, final expense, mortgage protection, veterans benefits. National Producer #22144176.">
+    <meta name="keywords" content="insurance broker, life insurance, Family First Life, term life, whole life, final expense, mortgage protection, veterans benefits, Dalilah Perez">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+<base target="_blank">
+</head>
+<body>
+
+    <!-- ============================================
+         LOADING SCREEN
+         ============================================ -->
+    <div class="loader" id="loader">
+        <div class="loader-brand" id="loaderBrand">Dalilah Perez</div>
+        <div class="loader-line"></div>
+    </div>
+
+    <!-- ============================================
+         NAVIGATION
+         ============================================ -->
+    <nav class="nav" id="nav">
+        <a href="#" class="nav-logo">Dalilah.</a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#carriers">Carriers</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="nav-cta" onclick="scrollToSection('contact')">Get a Quote</button>
+    </nav>
+
+    <!-- ============================================
+         HERO — EDITORIAL SPLIT
+         ============================================ -->
+    <section class="hero" id="hero">
+        <div class="hero-left">
+            <div class="hero-label">Family First Life</div>
+            <h1 class="hero-title">
+                <span class="word">Protecting</span>
+                <span class="word">What</span>
+                <span class="word"><em>Matters</em></span>
+                <span class="word"><em>Most</em></span>
+            </h1>
+            <p class="hero-subtitle">
+                Personalized insurance solutions for life, health, and legacy planning.
+                Licensed broker with top A-rated carriers serving families nationwide.
+            </p>
+            <div class="hero-cta-group">
+                <a href="tel:6307304847" class="btn-primary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Call Now
+                </a>
+                <a href="#services" class="btn-text">
+                    Explore Services
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <img src="data:image/jpeg;base64,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" alt="Dalilah Perez - Insurance Broker" class="hero-image">
+            <div class="hero-image-overlay"></div>
+            <div class="hero-badge-float">
+                <div class="badge-label">National Producer</div>
+                <div class="badge-value">#22144176</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         MARQUEE — SERVICES SCROLL
+         ============================================ -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <span class="marquee-item">Term Life</span>
+            <span class="marquee-item">&bull;</span>
+            <span class="marquee-item">Whole Life</span>
+            <span class="marquee-item">&bull;</span>
+            <span class="marquee-item">Universal Life</span>
+            <span class="marquee-item">&bull;</span>
+            <span class="marquee-item">Final Expense</span>
+            <span class="marquee-item">&bull;</span>
+            <span class="marquee-item">Mortgage Protection</span>
+            <span class="marquee-item">&bull;</span>
+            <span class="marquee-item">Veterans Benefits</span>
+            <span class="marquee-item">&bull;</span>
+            <span class="marquee-item">Legacy Planning</span>
+            <span class="marquee-item">&bull;</span>
+            <span class="marquee-item">A-Rated Carriers</span>
+            <span class="marquee-item">&bull;</span>
+            <!-- Duplicate for seamless loop -->
+            <span class="marquee-item">Term Life</span>
+            <span class="marquee-item">&bull;</span>
+            <span class="marquee-item">Whole Life</span>
+            <span class="marquee-item">&bull;</span>
+            <span class="marquee-item">Universal Life</span>
+            <span class="marquee-item">&bull;</span>
+            <span class="marquee-item">Final Expense</span>
+            <span class="marquee-item">&bull;</span>
+            <span class="marquee-item">Mortgage Protection</span>
+            <span class="marquee-item">&bull;</span>
+            <span class="marquee-item">Veterans Benefits</span>
+            <span class="marquee-item">&bull;</span>
+            <span class="marquee-item">Legacy Planning</span>
+            <span class="marquee-item">&bull;</span>
+            <span class="marquee-item">A-Rated Carriers</span>
+            <span class="marquee-item">&bull;</span>
+        </div>
+    </div>
+
+    <!-- ============================================
+         ABOUT SECTION
+         ============================================ -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">About</span>
+                <h2 class="section-title">Your Trusted Insurance Partner</h2>
+                <p class="section-subtitle">Dedicated to finding the right coverage for every stage of life.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-wrap reveal">
+                    <img src="data:image/jpeg;base64,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" alt="Dalilah Perez - Family First Life Insurance Broker">
+                    <div class="about-image-frame"></div>
+                </div>
+                <div class="about-content reveal reveal-delay-1">
+                    <h3>Personal &amp; <em>Professional</em> Excellence</h3>
+                    <p>As a licensed insurance broker with Family First Life, I am dedicated to finding the right coverage for every stage of life. My mission is to protect families and ensure peace of mind through personalized insurance solutions.</p>
+                    <p>I work exclusively with A-rated insurance carriers including Americo, AIG, Mutual of Omaha, Transamerica, John Hancock, and more &mdash; ensuring every policy I recommend comes from companies with proven financial strength and reliability.</p>
+                    <div class="about-quote">
+                        &ldquo;The best time to get life insurance was yesterday. The second best time is today.&rdquo;
+                    </div>
+                    <div class="about-credentials">
+                        <div class="credential-stat">
+                            <div class="stat-number" data-count="500" data-suffix="+">0</div>
+                            <div class="stat-label">Families Protected</div>
+                        </div>
+                        <div class="credential-stat">
+                            <div class="stat-number" data-count="15">0</div>
+                            <div class="stat-label">A-Rated Carriers</div>
+                        </div>
+                        <div class="credential-stat">
+                            <div class="stat-number" data-count="50" data-suffix="+">0</div>
+                            <div class="stat-label">States Licensed</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CARRIERS SECTION
+         ============================================ -->
+    <section class="carriers-section" id="carriers">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Partners</span>
+                <h2 class="section-title">A-Rated Carriers</h2>
+                <p class="section-subtitle">We partner only with financially strong, top-rated insurance companies.</p>
+            </div>
+            <div class="carriers-grid">
+                <div class="carrier-item"><div class="carrier-name">Americo</div><div class="carrier-rating">A Rated</div></div>
+                <div class="carrier-item"><div class="carrier-name">CVS Health / Aetna</div><div class="carrier-rating">A Rated</div></div>
+                <div class="carrier-item"><div class="carrier-name">John Hancock</div><div class="carrier-rating">A+ Rated</div></div>
+                <div class="carrier-item"><div class="carrier-name">American-Amicable</div><div class="carrier-rating">A Rated</div></div>
+                <div class="carrier-item"><div class="carrier-name">AIG</div><div class="carrier-rating">A Rated</div></div>
+                <div class="carrier-item"><div class="carrier-name">Mutual of Omaha</div><div class="carrier-rating">A+ Rated</div></div>
+                <div class="carrier-item"><div class="carrier-name">Prosperity Life</div><div class="carrier-rating">A Rated</div></div>
+                <div class="carrier-item"><div class="carrier-name">Ethos</div><div class="carrier-rating">A Rated</div></div>
+                <div class="carrier-item"><div class="carrier-name">Aflac</div><div class="carrier-rating">A+ Rated</div></div>
+                <div class="carrier-item"><div class="carrier-name">Foresters Financial</div><div class="carrier-rating">A Rated</div></div>
+                <div class="carrier-item"><div class="carrier-name">National Life Group</div><div class="carrier-rating">A+ Rated</div></div>
+                <div class="carrier-item"><div class="carrier-name">Transamerica</div><div class="carrier-rating">A Rated</div></div>
+                <div class="carrier-item"><div class="carrier-name">Gerber Life</div><div class="carrier-rating">A Rated</div></div>
+                <div class="carrier-item"><div class="carrier-name">CFG / Colonial Penn</div><div class="carrier-rating">A Rated</div></div>
+                <div class="carrier-item"><div class="carrier-name">Family First Life</div><div class="carrier-rating">Premier Partner</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SERVICES SECTION
+         ============================================ -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Services</span>
+                <h2 class="section-title">Comprehensive Coverage</h2>
+                <p class="section-subtitle">Tailored insurance solutions designed around your life, not a one-size-fits-all policy.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-number">01</div>
+                    <h3 class="service-title">Term Life Insurance</h3>
+                    <p class="service-desc">Affordable protection for a specific period. Ideal for mortgage protection, income replacement, and family security during peak earning years.</p>
+                    <span class="service-tag">Most Popular</span>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-number">02</div>
+                    <h3 class="service-title">Whole Life Insurance</h3>
+                    <p class="service-desc">Permanent coverage with guaranteed cash value growth. Build a financial foundation that lasts a lifetime with fixed premiums.</p>
+                    <span class="service-tag">Legacy Builder</span>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-number">03</div>
+                    <h3 class="service-title">Universal Life</h3>
+                    <p class="service-desc">Flexible premiums and adjustable coverage. Perfect for those who want permanent protection with the ability to adapt as life changes.</p>
+                    <span class="service-tag">Flexible</span>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-number">04</div>
+                    <h3 class="service-title">Final Expense</h3>
+                    <p class="service-desc">Simplified issue burial insurance to cover funeral costs, medical bills, and outstanding debts. No medical exam required for most plans.</p>
+                    <span class="service-tag">Guaranteed Issue</span>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-number">05</div>
+                    <h3 class="service-title">Mortgage Protection</h3>
+                    <p class="service-desc">Ensure your family's home stays in their hands. Coverage that pays off the mortgage if the unexpected happens.</p>
+                    <span class="service-tag">Family First</span>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-number">06</div>
+                    <h3 class="service-title">Veterans Benefits</h3>
+                    <p class="service-desc">Specialized guidance for military families. Understanding VA benefits, SGLI, and supplemental coverage for those who served.</p>
+                    <span class="service-tag">Honored Service</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TESTIMONIALS SECTION
+         ============================================ -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Testimonials</span>
+                <h2 class="section-title">What Clients Say</h2>
+                <p class="section-subtitle">Real stories from real families who found peace of mind.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-quote-mark">&ldquo;</div>
+                    <p class="testimonial-text">Dalilah made the entire process so simple. I thought getting life insurance would be complicated, but she walked me through every step and found a policy that fit my budget perfectly.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JM</div>
+                        <div class="testimonial-info">
+                            <h4>James Mitchell</h4>
+                            <p>Term Life Client</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <div class="testimonial-quote-mark">&ldquo;</div>
+                    <p class="testimonial-text">As a veteran, I had specific needs. Dalilah understood VA benefits and helped me find supplemental coverage my family needed. Truly knowledgeable and caring.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RT</div>
+                        <div class="testimonial-info">
+                            <h4>Robert Torres</h4>
+                            <p>Veterans Benefits Client</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <div class="testimonial-quote-mark">&ldquo;</div>
+                    <p class="testimonial-text">When my husband passed, our mortgage protection policy saved our home. I'm forever grateful for Dalilah's foresight in recommending that coverage years ago.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">EW</div>
+                        <div class="testimonial-info">
+                            <h4>Eleanor Williams</h4>
+                            <p>Mortgage Protection Client</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT SECTION
+         ============================================ -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-content reveal">
+                <span class="section-label">Get Started</span>
+                <h2 class="contact-title">Let's Protect Your <em>Future</em></h2>
+                <p class="contact-subtitle">Ready to explore your options? Schedule a free, no-obligation consultation. I'll analyze your needs and present tailored solutions from A-rated carriers.</p>
+
+                <div class="contact-methods">
+                    <a href="tel:6307304847" class="contact-method">
+                        <div class="contact-method-icon">&#128222;</div>
+                        <span>(630) 730-4847</span>
+                    </a>
+                    <a href="mailto:dalilahlifebroker@gmail.com" class="contact-method">
+                        <div class="contact-method-icon">&#9993;</div>
+                        <span>dalilahlifebroker@gmail.com</span>
+                    </a>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000">
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">I'm Interested In</label>
+                        <select id="interest" name="interest" required>
+                            <option value="">Select a service...</option>
+                            <option value="term">Term Life Insurance</option>
+                            <option value="whole">Whole Life Insurance</option>
+                            <option value="universal">Universal Life</option>
+                            <option value="final">Final Expense / Burial</option>
+                            <option value="mortgage">Mortgage Protection</option>
+                            <option value="veterans">Veterans Benefits</option>
+                            <option value="legacy">Legacy Planning</option>
+                            <option value="other">Other / Not Sure</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Details (Optional)</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your situation and goals..."></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">Request Consultation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="footer-brand">Dalilah Perez</div>
+        <p class="footer-tagline">Family First Life Insurance Broker</p>
+        <p class="footer-contact">
+            National Producer #22144176 &bull; Licensed Nationwide<br>
+            <a href="tel:6307304847">(630) 730-4847</a> &bull;
+            <a href="mailto:dalilahlifebroker@gmail.com">dalilahlifebroker@gmail.com</a>
+        </p>
+        <div class="footer-social">
+            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="Instagram">ig</a>
+            <a href="mailto:dalilahlifebroker@gmail.com" class="social-link" aria-label="Email">@</a>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Dalilah Perez | Family First Life. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
+    <script src="script.js"></script>
+</body>
+</html>
